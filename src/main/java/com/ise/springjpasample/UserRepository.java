@@ -11,4 +11,8 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<UserEntity, String> {
     @Override
     <S extends UserEntity> List<S> findAll(Example<S> example);
+
+    List<UserEntity> findByName(String name);
+
+
 }
